@@ -18,7 +18,7 @@ namespace Figures {
 
     [[nodiscard]] vector<Pixel> Triangle::GetPixels() const {
         vector<Pixel> result{};
-        const auto&& step = this->height > 0 ? 1 : -1;
+        const auto &&step = this->height > 0 ? 1 : -1;
         const auto &&X = static_cast<int>(this->x), &&Y = static_cast<int>(this->y) - this->height + step;
         for (auto j = max(0, -Y); j != this->height; j += step) {
             const auto &&point_y = Y + j;
